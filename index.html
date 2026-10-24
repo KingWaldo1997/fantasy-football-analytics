@@ -5,7 +5,7 @@
 <title>Fantasy Football Analytics Desk</title>
 <style>
 :root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#eef3fb;background:#0d131c;--panel:#182231;--line:#304055;--muted:#a9b6c8;--blue:#91c2ff;--green:#9be2b1;--amber:#ffd38a}
-*{box-sizing:border-box}body{max-width:1120px;margin:auto;padding:22px 15px 48px}h1{font-size:clamp(1.7rem,4vw,2.5rem);margin:4px 0 8px}h2{font-size:1.12rem;margin:0 0 12px}p{line-height:1.5}.muted{color:var(--muted)}.small{font-size:.83rem}.panel{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:17px;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.row{display:flex;gap:10px;align-items:end;flex-wrap:wrap}.field{flex:1;min-width:185px}label{display:block;color:var(--muted);font-size:.85rem;margin-bottom:6px}input,select,textarea{width:100%;font:inherit;color:#eef3fb;background:#0d1520;border:1px solid var(--line);border-radius:9px;padding:11px}textarea{min-height:80px}.autocomplete{position:relative}.suggestions{position:absolute;z-index:20;top:calc(100% + 4px);left:0;right:0;max-height:260px;overflow-y:auto;background:#101a28;border:1px solid #49617d;border-radius:10px;box-shadow:0 12px 28px #0008}.suggestions button{display:block;width:100%;text-align:left;background:transparent;color:#eef3fb;border-radius:0;border-bottom:1px solid #26364a;padding:11px 12px;font-weight:500}.suggestions button:last-child{border-bottom:0}.suggestions button:hover,.suggestions button:focus{background:#26384f}.suggestions small{display:block;color:var(--muted);font-weight:400}.selected-note{font-size:.78rem;color:var(--green);margin-top:5px;min-height:1em}button{font:inherit;font-weight:700;background:var(--blue);color:#071323;border:0;border-radius:9px;padding:11px 15px;cursor:pointer}button.secondary{background:#29384d;color:#eef3fb;border:1px solid #3c4c62}button:disabled{opacity:.55;cursor:wait}.tag{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:5px 9px;margin:3px 4px 3px 0;color:var(--muted);font-size:.78rem}.statbox{border:1px solid var(--line);border-radius:10px;padding:12px}.big{font-size:1.45rem;font-weight:750}.status,.report{white-space:pre-wrap;background:#0d1520;border:1px solid var(--line);border-radius:10px;padding:13px;line-height:1.5;overflow-wrap:anywhere}.report{min-height:100px}.good{color:var(--green)}.warn{color:var(--amber)}.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:9px}.checks label{display:flex;gap:8px;align-items:flex-start;color:#eef3fb;margin:0}.checks input{width:auto;margin-top:4px}a{color:var(--blue)}footer{color:var(--muted);font-size:.82rem;line-height:1.5;margin-top:22px}
+*{box-sizing:border-box}body{max-width:1120px;margin:auto;padding:22px 15px 48px}h1{font-size:clamp(1.7rem,4vw,2.5rem);margin:4px 0 8px}h2{font-size:1.12rem;margin:0 0 12px}p{line-height:1.5}.muted{color:var(--muted)}.small{font-size:.83rem}.panel{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:17px;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.row{display:flex;gap:10px;align-items:end;flex-wrap:wrap}.field{flex:1;min-width:185px}label{display:block;color:var(--muted);font-size:.85rem;margin-bottom:6px}input,select,textarea{width:100%;font:inherit;color:#eef3fb;background:#0d1520;border:1px solid var(--line);border-radius:9px;padding:11px}textarea{min-height:80px}button{font:inherit;font-weight:700;background:var(--blue);color:#071323;border:0;border-radius:9px;padding:11px 15px;cursor:pointer}button.secondary{background:#29384d;color:#eef3fb;border:1px solid #3c4c62}button:disabled{opacity:.55;cursor:wait}.tag{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:5px 9px;margin:3px 4px 3px 0;color:var(--muted);font-size:.78rem}.statbox{border:1px solid var(--line);border-radius:10px;padding:12px}.big{font-size:1.45rem;font-weight:750}.status,.report{white-space:pre-wrap;background:#0d1520;border:1px solid var(--line);border-radius:10px;padding:13px;line-height:1.5;overflow-wrap:anywhere}.report{min-height:100px}.good{color:var(--green)}.warn{color:var(--amber)}.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:9px}.checks label{display:flex;gap:8px;align-items:flex-start;color:#eef3fb;margin:0}.checks input{width:auto;margin-top:4px}a{color:var(--blue)}footer{color:var(--muted);font-size:.82rem;line-height:1.5;margin-top:22px}
 </style>
 </head>
 <body>
@@ -28,12 +28,12 @@
 <section class="panel">
 <h2>2. Generate a start/sit report</h2>
 <div class="grid">
-<div><label for="playerA">Player A</label><div class="autocomplete"><input id="playerA" autocomplete="off" placeholder="Type a player name…" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestionsA"><div id="suggestionsA" class="suggestions" role="listbox" hidden></div></div><div id="selectedA" class="selected-note"></div></div>
-<div><label for="playerB">Player B</label><div class="autocomplete"><input id="playerB" autocomplete="off" placeholder="Type a player name…" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestionsB"><div id="suggestionsB" class="suggestions" role="listbox" hidden></div></div><div id="selectedB" class="selected-note"></div></div>
+<div><label for="playerA">Player A</label><input id="playerA" list="playersList" placeholder="Enter full player name"></div>
+<div><label for="playerB">Player B</label><input id="playerB" list="playersList" placeholder="Enter full player name"></div>
 <div><label for="position">Decision type</label><select id="position"><option>Auto-detect</option><option>QB</option><option>RB</option><option>WR</option><option>TE</option><option>FLEX</option><option>DST</option><option>K</option></select></div>
 <div><label for="weeks">Recent completed games to compare</label><select id="weeks"><option value="3">Last 3 games</option><option value="4">Last 4 games</option><option value="5" selected>Last 5 games</option><option value="6">Last 6 games</option></select></div>
 </div>
-<p class="small muted">Start typing, then tap a player from the dropdown. Reports only accept a player selected from the loaded Sleeper directory.</p>
+<datalist id="playersList"></datalist>
 <div style="margin-top:14px"><label for="context">Roster and league context (optional)</label><textarea id="context" placeholder="Add league-specific details, roster alternatives, weather concerns, or what you want weighed most."></textarea></div>
 <h2 style="margin-top:18px">Factors to include</h2>
 <div class="checks" id="factors">
@@ -67,8 +67,7 @@
 <script>
 'use strict';
 const $=id=>document.getElementById(id);
-let nflState=null, playerMap={}, playerDirectory=[], playerDirectoryLoaded=false, currentReport='', lastDataError='';
-const selectedPlayers={A:null,B:null};
+let nflState=null, playerMap={}, playerDirectoryLoaded=false, currentReport='', lastDataError='';
 const statsCache=new Map();
 function status(s){$('dataStatus').textContent=s}
 function safeCacheRead(k){try{const v=JSON.parse(localStorage.getItem(k)||'null');if(v&&v.savedAt&&Date.now()-v.savedAt<86400000)return v.data}catch(e){}return null}
@@ -86,9 +85,10 @@ async function refreshData(){
   let map=safeCacheRead('ffad_player_directory');
   if(!map){map=await getJSON('https://api.sleeper.app/v1/players/nfl');safeCacheWrite('ffad_player_directory',map)}
   playerMap=map;playerDirectoryLoaded=true;
-  const arr=Object.values(map).filter(p=>p&&p.full_name&&p.position&&(p.player_id||p.id));
-  playerDirectory=arr.sort((a,b)=>a.full_name.localeCompare(b.full_name));
+  const arr=Object.values(map).filter(p=>p&&p.full_name&&p.position);
   $('playerCount').textContent=arr.length.toLocaleString();$('playerStatus').textContent='Loaded; directory cached up to 24 hours';
+  const list=$('playersList');list.replaceChildren();
+  arr.sort((a,b)=>a.full_name.localeCompare(b.full_name)).forEach(p=>{const o=document.createElement('option');o.value=p.full_name;list.appendChild(o)});
   messages.push('Player directory: connected ('+arr.length.toLocaleString()+' entries).');
  }catch(e){playerDirectoryLoaded=false;$('playerStatus').textContent='Unavailable';messages.push('Player directory failed: '+e.message)}
  $('statsStatus').textContent='On demand';$('statsMeta').textContent='Weekly logs load when a report is generated';
@@ -96,33 +96,13 @@ async function refreshData(){
  status(messages.join('\n')+'\nWeekly player stats are fetched only for the weeks needed by your report.');
  $('refresh').disabled=false;
 }
-function playerLabel(p){return p.full_name+(p.team?' · '+p.team:'')+(p.position?' · '+p.position:'')}
-function closeSuggestions(which){const box=$('suggestions'+which),input=$('player'+which);box.hidden=true;box.replaceChildren();input.setAttribute('aria-expanded','false')}
-function showSuggestions(which){
- const input=$('player'+which),box=$('suggestions'+which),q=input.value.trim().toLowerCase();
- box.replaceChildren();
- if(!playerDirectoryLoaded||q.length<1){closeSuggestions(which);return}
- const compact=q.replace(/[^a-z0-9]/g,'');
- const matches=playerDirectory.filter(p=>p.full_name.toLowerCase().includes(q)||(p.search_full_name||'').toLowerCase().includes(compact)).slice(0,15);
- if(!matches.length){const empty=document.createElement('div');empty.className='small muted';empty.style.padding='12px';empty.textContent='No matching players in the loaded directory.';box.appendChild(empty);box.hidden=false;input.setAttribute('aria-expanded','true');return}
- matches.forEach(p=>{
-  const option=document.createElement('button');option.type='button';option.setAttribute('role','option');option.textContent=p.full_name;
-  const detail=document.createElement('small');detail.textContent=(p.team||'Team not listed')+' · '+p.position+(p.status?' · '+p.status:'');option.appendChild(detail);
-  option.addEventListener('click',()=>selectPlayer(which,p));box.appendChild(option);
- });
- box.hidden=false;input.setAttribute('aria-expanded','true');
-}
-function selectPlayer(which,p){
- selectedPlayers[which]=p;$('player'+which).value=p.full_name;
- $('selected'+which).textContent='Selected: '+playerLabel(p);closeSuggestions(which);
-}
-function clearPlayerSelection(which){selectedPlayers[which]=null;$('selected'+which).textContent=''}
-function bindPlayerAutocomplete(which){
- const input=$('player'+which);
- input.addEventListener('input',()=>{clearPlayerSelection(which);showSuggestions(which)});
- input.addEventListener('focus',()=>{if(input.value.trim())showSuggestions(which)});
- input.addEventListener('keydown',e=>{if(e.key==='Escape')closeSuggestions(which);if(e.key==='Enter'){const first=$('suggestions'+which).querySelector('button');if(first&&!$('suggestions'+which).hidden){e.preventDefault();first.click()}}});
- document.addEventListener('click',e=>{if(!input.parentElement.contains(e.target))closeSuggestions(which)});
+function findPlayer(input){
+ if(!playerDirectoryLoaded||!input.trim())return null;
+ const target=input.trim().toLowerCase(), compact=target.replace(/[^a-z0-9]/g,'');
+ const arr=Object.values(playerMap);
+ return arr.find(p=>(p.full_name||'').toLowerCase()===target)
+ ||arr.find(p=>(p.search_full_name||'').toLowerCase()===compact)
+ ||arr.find(p=>(p.full_name||'').toLowerCase().includes(target));
 }
 function num(o,...keys){for(const k of keys){const v=o&&o[k];if(v!==undefined&&v!==null&&v!==''&&Number.isFinite(Number(v)))return Number(v)}return 0}
 function customPoints(s){
@@ -141,7 +121,7 @@ function findStatRow(payload,pid){
 async function getWeekStats(season,week){
  const key=season+'-'+week;if(statsCache.has(key))return statsCache.get(key);
  // Sleeper's documented public stat path includes the season type before season and week.
- const data=await getJSON(`https://api.sleeper.com/stats/nfl/regular/${season}/${week}?season_type=regular`);
+ const data=await getJSON(`https://api.sleeper.app/v1/stats/nfl/regular/${season}/${week}season_type=regular`);
  statsCache.set(key,data);return data;
 }
 function sumRecent(rows){
@@ -178,8 +158,8 @@ async function generateReport(){
  $('report').textContent='Loading recent completed-week statistics and assembling the report…';
  try{
   if(!playerDirectoryLoaded)throw new Error('First press “Refresh public data” so the public player directory is loaded. If refresh failed, the report can still be generated after retrying.');
-  const a=selectedPlayers.A,b=selectedPlayers.B;
-  if(!a||!b)throw new Error('Select both players by tapping a name in the dropdown. Typed text alone is not accepted.');
+  const a=findPlayer($('playerA').value),b=findPlayer($('playerB').value);
+  if(!a||!b)throw new Error('Enter two player names that match the loaded player directory. Use full names from the suggestions.');
   if(String(a.player_id||a.id)===String(b.player_id||b.id))throw new Error('Choose two different players to compare.');
   const count=Number($('weeks').value);
   const [da,db]=await Promise.all([getRecentRows(a,count),getRecentRows(b,count)]);
@@ -196,7 +176,6 @@ async function generateReport(){
   $('report').textContent='REPORT NOT COMPLETED\n'+e.message+'\n\nTry: 1) Refresh public data, 2) enter both players using the suggestions, 3) press Generate report again. If the browser blocks the public endpoint, the dashboard cannot bypass that restriction; the report button will show the error rather than claim it succeeded.';
  }finally{button.disabled=false;button.textContent='Generate report'}
 }
-bindPlayerAutocomplete('A');bindPlayerAutocomplete('B');
 $('refresh').addEventListener('click',refreshData);
 $('generate').addEventListener('click',generateReport);
 $('copy').addEventListener('click',async()=>{
